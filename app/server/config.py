@@ -15,10 +15,6 @@ class Config:
     SQLALCHEMY_DATABASE_URI = environ.get("SQLALCHEMY_DATABASE_URI")
     SQLALCHEMY_ECHO = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SENDGRID_API_KEY = environ.get('SENDGRID_API_KEY')
-    SECURITY_PASSWORD_SALT = environ.get('SECURITY_PASSWORD_SALT')
-    SERVER_NAME = environ.get('SERVER_NAME')
-    LOCAL_BASE_URL = environ.get('LOCAL_BASE_URL')
 
 
 if __name__ == "__main__":
