@@ -14,8 +14,6 @@ services:
       context: ./app
       dockerfile: Dockerfile.dev
     container_name: server
-    env_file:
-      - ./app/server/.env
     volumes:
       - ./app:/app
     depends_on:
@@ -39,29 +37,6 @@ services:
   redis:
     image: 'redis:latest'
     container_name: "redis_server"
-
-  client:
-    build:
-      context: ./client
-      dockerfile: Dockerfile
-    volumes:
-      - ./client:/app
-      - /client/node_modules
-    ports:
-      - "3000:3000"
-    stdin_open: true
-  nginx:
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile
-    depends_on:
-      - api
-      - client
-    restart: always
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-    ports:
-      - "8081:81"
   phpmyadmin:
     depends_on:
       - db
