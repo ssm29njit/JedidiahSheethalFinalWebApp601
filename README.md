@@ -2,15 +2,17 @@
 
 This project allows the user to post data and calculate statistical values. 
 User has the ability to create an account, log in, verify account, and generate datasets.
+Random datasets are used to calculate, Mean, Median, StandardDev, and Variance
 
-![Localhost](https://user-images.githubusercontent.com/13598741/102641881-d335bb80-4182-11eb-9e68-4c8da2bdc381.gif)
-# Screenshot 
+## Steps to follow
+1. Go to https://github.com/ssm29njit/JedidiahSheethalFinalWebApp601.git and download
+2. Open in pycharm. Add the SENDGRID_API_KEY provided in comments section of canvas to the init.py under mail folder
+3. Run docker-compose up
 
 
-![screenshot-1](https://user-images.githubusercontent.com/13598741/102641983-fceee280-4182-11eb-94fb-cc7385c4e727.jpg)
+## Screenshot 
 
-![screenshot-2](https://user-images.githubusercontent.com/13598741/102641989-fe200f80-4182-11eb-83bd-cbbca501f69e.jpg)
 
-![screenshot-3](https://user-images.githubusercontent.com/13598741/102641993-fe200f80-4182-11eb-8816-7f661f91fcf2.jpg)
-
-![screenshot-4](https://user-images.githubusercontent.com/13598741/102641994-feb8a600-4182-11eb-8861-5863f65d4894.jpg)
+##TeamMember: 
+Sheethal Mathew
+Jedidiah John

@@ -8,6 +8,7 @@ from flask_jwt_extended import (
     get_jwt_identity
 )
 from flask_login import LoginManager
+from flask_mail import Mail, Message
 from server.model.userModel import UserModel as User
 from server.model import db
 
@@ -17,7 +18,8 @@ def create_app(test_config=None):
     app = Flask(__name__)
 
     app.config.from_object('server.config.Config')
-    app.secret_key = "zhang"
+    app.config['SECRET_KEY'] = 'sheethal'
+    app.config['SECURITY_PASSWORD_SALT'] = 'saltsheethal'
     app.config['SERVER_NAME'] = 'localhost:5000'
     if test_config == None:
         app.config.from_object('server.config.Config')
@@ -45,7 +47,7 @@ def create_app(test_config=None):
         @login_manager.unauthorized_handler
         def unauthorized_callback():
             flash("Your must log in first", "error")
-            return redirect('http://localhost:8081/api/login')
+            return redirect('http:login//localhost:8081/api/')
 
 
         @jwt.invalid_token_loader

@@ -5,24 +5,25 @@ from flask import current_app, flash, redirect, url_for
 from functools import wraps
 from flask_login import current_user
 
-def send_mail(to,subject,message):
-    print(current_app.config['SENDGRID_API_KEY'])
+def send_mail(to, subject, message):
+
     message = Mail(
-        from_email='tommywenjiezhang@gmail.com',
-        to_emails=to,
-        subject=subject,
-        html_content=message)
+         from_email='ssm29@njit.edu',
+         to_emails=to,
+         subject=subject,
+         html_content=message)
+
     try:
-        sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
-        print(current_app.config['SENDGRID_API_KEY'])
+        #API key loaded from .env file and can be found in comments
+        api_key = os.environ.get('SENDGRID_API_KEY')
+        sg = SendGridAPIClient(api_key)
         response = sg.send(message)
         print(response.status_code)
         print(response.body)
         print(response.headers)
+
     except Exception as e:
-        print(e.body)
-
-
+        print(e.message)
 
 
 def check_confirmed(func):

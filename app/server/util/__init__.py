@@ -11,8 +11,9 @@ def todayandnow():
     return datetime.now(pytz.timezone('US/Eastern')).strftime('%Y-%m-%d %H:%M:%S')
 
 def combinUrl(params):
-    baseUrl = os.environ.get('LOCAL_BASE_URL')
-    return baseUrl + str(params)
+    #baseUrl = os.environ.get('LOCAL_BASE_URL')
+    baseUrl = 'localhost:5000/'
+    return baseUrl, params
 
 
 def extractNumber(phoneNumberString):

@@ -16,8 +16,12 @@ class IndexRoute(Resource):
     def get(self):
         datasets = DatasetModel.query.all()
         datasetSchema = DatasetSchema()
-        jsonRes = json.dumps([datasetSchema.dump(dataset) for dataset in datasets])
-        return Response(response=jsonRes, status=200)
+        #jsonRes = json.dumps([datasetSchema.dump(dataset) for dataset in datasets])
+        #return Response(response=jsonRes, status=200)
+
+        html = render_template('dataset/cview.html')
+        headers = {'Content-Type': 'text/html'}
+        return make_response(html, 200, headers)
 
 class NewRoute(Resource):
 
