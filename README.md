@@ -11,8 +11,8 @@ Random datasets are used to calculate, Mean, Median, StandardDev, and Variance
 
 
 ## Screenshot 
+![Test Image 7](screenshots/Login.PNG)
 
-
-##TeamMember: 
+## TeamMembers 
 Sheethal Mathew
 Jedidiah John
