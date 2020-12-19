@@ -14,7 +14,6 @@ Random datasets are used to calculate, Mean, Median, StandardDev, and Variance
 ![Test Image 7](screenshots/randomNumBarChart.PNG)
 ![Test Image 7](screenshots/BarChartIntegration.PNG)
 ![Alt text](screenshots/register.png?raw=true "Register")
-![Test Image 7](screenshots/signup.PNG)
 ![Test Image 7](screenshots/Login.PNG)
 ![Alt text](screenshots/emailconfirmation.png?raw=true "Email Confirmation")
 ![Alt text](screenshots/emailconfirmation2.png?raw=true "Received Email")
