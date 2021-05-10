@@ -7,7 +7,7 @@ class Helper():
             counter = 0
             containStringInput = False
             for item in args:
-                if counter >= 1:
+                if counter >= 3:
                     if type(item) not in (float,int):
                         print(type(item))
                         containStringInput = True
