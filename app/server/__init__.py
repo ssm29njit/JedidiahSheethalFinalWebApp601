@@ -18,9 +18,7 @@ def create_app(test_config=None):
     app = Flask(__name__)
 
     app.config.from_object('server.config.Config')
-    app.config['SECRET_KEY'] = 'sheethal'
-    app.config['SECURITY_PASSWORD_SALT'] = 'saltsheethal'
-    app.config['SERVER_NAME'] = 'localhost:5000'
+
     if test_config == None:
         app.config.from_object('server.config.Config')
     else:
