@@ -49,12 +49,3 @@ class StatsCalculator(Calculator):
         '''
         return statistics.variance(lst)
 
-    @Helper.validateListInput
-    def z_score(self, x, lst):
-        '''
-        Z score
-        :param x:
-        :param lst:
-        :return: Z score of list
-        '''
-        return (x - self.mean(lst))/self.stdev(lst)
