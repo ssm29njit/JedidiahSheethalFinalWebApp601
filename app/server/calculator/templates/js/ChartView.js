@@ -223,11 +223,6 @@ $(document).ready(()=>{
          $("#bar_chart").children().toggleClass('active')
     })
 
-    $("#pie_chart").click(function(){
-        const newChart = new ChartView(canvas, 1).renderPieChart()
-        $(this).toggleClass('active')
-         $("#bar_chart").children().toggleClass('active')
-    })
 })
 
 
