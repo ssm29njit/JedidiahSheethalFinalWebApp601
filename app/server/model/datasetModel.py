@@ -1,7 +1,6 @@
 from . import db
 from marshmallow import Schema, fields
 import json
-from server.redis import RedisClient
 from server.util import hashIdandTitle
 import struct
 class DatasetModel(db.Model):
@@ -49,14 +48,6 @@ class DatasetModel(db.Model):
         db.session.commit()
         return id
 
-    def getDataSet(self):
-        print(self.title)
-        print(self.id)
-        hashValue = hashIdandTitle(self.title, self.id)
-        client = RedisClient()
-        dataset = client.getFullList(hashValue)
-        newLst = [float(i.decode('utf-8')) for i in dataset]
-        return newLst
 
     def delete_from_db(self):
         hashValue = hashIdandTitle(self.title, self.id)
